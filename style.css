@@ -53,6 +53,7 @@ body {
 	text-align: center;
 	border-bottom: 1px solid #cccccc;
 }
+
 .menu .content-selection {
 	padding-top: 30px;
 	text-align: center;
@@ -62,6 +63,20 @@ body {
 }
 .menu .content-selection .Select-quiz {
 	margin-bottom: 30px;
+}
+.vocab-box .vocab-2gt2 {
+	margin-top: 30px;
+}
+
+.vocab-box .vocab-2gt6 {
+	margin-top: 30px;
+}
+ .button-back {
+	margin-top: 60px;
+	text-align: right;
+}
+.sketchBox .content-sketch{
+
 }
 
 
@@ -81,6 +96,13 @@ body {
 }
 .title-sketch { 
 	border-bottom: 1px solid #cccccc;
+	padding-bottom: 10px;
+	text-align: center;
+ }
+
+ .Title-vocab { 
+	border-bottom: 1px solid #cccccc;
+	font-size: 20px;
 	padding-bottom: 10px;
 	text-align: center;
  }
@@ -261,6 +283,9 @@ body {
 	display: none;
 }
 .sketchBox.hide {
+	display: none;
+}
+.vocab-box.hide {
 	display: none;
 }
 
