@@ -9,8 +9,8 @@ const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const sketchBox = document.querySelector(".sketchBox");
 const menu = document.querySelector(".menu");
-const questionLimit = 5; // si je veux toutes les questions, remplacer 5 par quiz.lenght
-
+const questionLimit = 10; // si je veux toutes les questions, remplacer 5 par quiz.lenght
+const vocabBox = document.querySelector(".vocab-box");
 let questionCounter =0;
 let currentQuestion;
 let availableQuestions = [];
@@ -18,6 +18,9 @@ let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
 
+
+
+console.log(questionLimit);
 function  setAvailableQuestions(){
 	const totalQuestion = quiz.length;
 	for(let i=0; i<totalQuestion; i++) {
@@ -141,12 +144,14 @@ function tryAgainQuiz() {
 function goToHome() {
 	resultBox.classList.add("hide");
 	menu.classList.add("hide");
+	vocabBox.classList.add("hide");
 	homeBox.classList.remove("hide");
 	resetQuiz();
 }
 function goToHome2() {
 	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	menu.classList.remove("hide");
 	resetQuiz();
@@ -157,6 +162,13 @@ function sketch() {
 	menu.classList.add("hide");
 	resetQuiz();
 
+}
+function vocab() {
+	homeBox.classList.add("hide");
+	sketchBox.classList.add("hide");	
+	menu.classList.add("hide");
+	vocabBox.classList.remove("hide");
+	resetQuiz();
 }
 // #### STARTINT POINT ####
 
