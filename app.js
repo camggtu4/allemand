@@ -8,6 +8,7 @@ const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const sketchBox = document.querySelector(".sketchBox");
+const menu = document.querySelector(".menu");
 const questionLimit = 5; // si je veux toutes les questions, remplacer 5 par quiz.lenght
 
 let questionCounter =0;
@@ -139,17 +140,21 @@ function tryAgainQuiz() {
 }
 function goToHome() {
 	resultBox.classList.add("hide");
+	menu.classList.add("hide");
 	homeBox.classList.remove("hide");
 	resetQuiz();
 }
 function goToHome2() {
 	sketchBox.classList.add("hide");
-	homeBox.classList.remove("hide");
+	homeBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.remove("hide");
 	resetQuiz();
 }
 function sketch() {
 	homeBox.classList.add("hide");
 	sketchBox.classList.remove("hide");	
+	menu.classList.add("hide");
 	resetQuiz();
 
 }
