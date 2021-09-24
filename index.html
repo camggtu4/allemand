@@ -13,7 +13,7 @@
 
 	<div class="menu custom-box">
 		<div class="title-selection">
-			<h1>Menu de sélection</h1>
+			<h2>Menu de sélection</h2>
 		</div>
 
 		<div class="content-selection">
@@ -27,8 +27,30 @@
 				<p> Réviser le Sketch :</p>
 				<button type="button" class="btn" onclick="sketch()">Sketch</button>
 			</div>
+			<div class="Select-vocab"> 
+				<p>Carnets de vocabulaire</p>
+				<button type="button" class="btn" onclick="vocab()">Vocab</button>
+			</div>
 			<div class="Select-quiz"></div>
-			<div class="Select-quiz"></div>
+		</div>
+	</div>
+
+			<!-- #### partie vocab ####-->
+
+	<div class="vocab-box custom-box hide ">
+		<div class="Title-vocab">
+			<h3> Carnets de vocabulaire</h3>
+		</div>
+		<div class="vocab-2gt6">
+			<p>Pour les 2GT6 :</p>
+			<button type="button" class=""><a href="img/2gt6.doc" download="Vocab 2GT6" class="btn">Télécharger</a></button>
+		</div>
+		<div class="vocab-2gt2">
+			<p>Pour les 2GT2 :</p>
+			<button type="button" class=""><a href="img/2gt2.doc" download="Vocab 2GT2" class="btn">Télécharger</a></button>
+		</div>
+		<div class="button-back">
+			<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
 		</div>
 	</div>
 
@@ -83,7 +105,7 @@
 			</tr>
 			<tr>
 				<td>Pourcentage<td>
-				<ta><span class="percentage"></span></ta>alc
+				<ta><span class="percentage"></span></ta>
 			</tr>
 			<tr>
 				<td> Score total <td>
@@ -96,7 +118,7 @@
 
 
 
-
+					<!-- #### partie sketch ####-->
 
 
 	<div class="sketchBox custom-box hide">
@@ -105,25 +127,27 @@
 		</div>
 		<div class="content-sketch"></div>
 		<p>A- Hallo Cousin, wie läuft deine Ferien?<br>
-C- Genial, danke! Und du, wie geht‘s?<br>
-A- Es geht mir gut. <br>
-C- Was hast du in deinen Ferien gemacht? <br>
-A- Ich bin auf den Markt gegangen mit Bruno und Katrin, und wir haben viel Zeit in den Geschäften verbracht. <br>
-C- Ok, es ist cool! Ich habe München und seine Kirche, die St Pierre Kirche besucht. <br>
-A- Schön! <br>
-A- Und wie geht’s Tante Paula ? <br>
-C- Oh, es geht ihr gut ! <br>
-A- Es ist schon eine Weile, dass ich sie gesehen habe. <br>
-A- Geht es deinem Vater gut ? <br>
-C- Ja, er hat noch viel Energie! <br>
-A- Gut ! <br>
-C- Geht es Ihrer Familie gut? <br>
-A- Ja, allen geht es gut. <br>
-C- so viel besser. <br>
-A- Tschüss, Cousin !> <br>
-C- Tschüss. <br>
-</p>
-<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
+			C- Genial, danke! Und du, wie geht‘s?<br>
+			A- Es geht mir gut. <br>
+			C- Was hast du in deinen Ferien gemacht? <br>
+			A- Ich bin auf den Markt gegangen mit Bruno und Katrin, und wir haben viel Zeit in den Geschäften verbracht. <br>
+			C- Ok, es ist cool! Ich habe München und seine Kirche, die St Pierre Kirche besucht. <br>
+			A- Schön! <br>
+			A- Und wie geht’s Tante Paula ? <br>
+			C- Oh, es geht ihr gut ! <br>
+			A- Es ist schon eine Weile, dass ich sie gesehen habe. <br>
+			A- Geht es deinem Vater gut ? <br>
+			C- Ja, er hat noch viel Energie! <br>
+			A- Gut ! <br>
+			C- Geht es Ihrer Familie gut? <br>
+			A- Ja, allen geht es gut. <br>
+			C- so viel besser. <br>
+			A- Tschüss, Cousin !> <br>
+			C- Tschüss. <br>
+			</p>
+		<div class="button-back">
+			<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
+		</div>
 	</div>
 <script src="question.js"></script>
 <script src="app.js"></script>
