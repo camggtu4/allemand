@@ -58,6 +58,14 @@ body {
 	margin-bottom: 15px;
 	line-height: 25px;
 }
+.title-sketch { 
+	border-bottom: 1px solid #cccccc;
+	padding-bottom: 10px;
+	text-align: center;
+ }
+ .content-sketch {
+ 	margin-top: 10px; 
+ }
 
 .home-box p {
 	font-size: 16px;
@@ -65,6 +73,14 @@ body {
 	line-height: 22px;
 	color: #000000;
 	font-weight: 400;
+}
+.menu p {
+	font-size: 16px;
+	margin-bottom: 10px;
+	line-height: 22px;
+	color: #000000;
+	font-weight: 400;
+	display: center;
 }
 .sketchBox p {
 	font-size: 16px;
@@ -98,7 +114,6 @@ body {
 .quiz-box .question-text,
 .quiz-box .option-container,
 .quiz-box .next-question-btn,
-.sketchBox,
 .quiz-box .answers-indicator {
 	width: 100%;
 	float: left;
