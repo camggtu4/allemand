@@ -51,8 +51,22 @@ body {
 	margin-bottom: 15px;
 	line-height: 25px;
 }
+.sketch h3{
+	font-size: 18px;
+	color: #000000;
+	font-weight: 500;
+	margin-bottom: 15px;
+	line-height: 25px;
+}
 
 .home-box p {
+	font-size: 16px;
+	margin-bottom: 10px;
+	line-height: 22px;
+	color: #000000;
+	font-weight: 400;
+}
+.sketch p {
 	font-size: 16px;
 	margin-bottom: 10px;
 	line-height: 22px;
@@ -84,6 +98,7 @@ body {
 .quiz-box .question-text,
 .quiz-box .option-container,
 .quiz-box .next-question-btn,
+.sketch 
 .quiz-box .answers-indicator {
 	width: 100%;
 	float: left;
@@ -189,7 +204,7 @@ body {
 }
 .quiz-box .answers-indicator div.correct{
 	background-color: green;
-	background-image: url("correct.png");
+	background-image: url("../img/correct.png");
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -197,7 +212,7 @@ body {
 
 .quiz-box .answers-indicator div.wrong{
 	background-color: red;
-	background-image: url("wrong.png");
+	background-image: url("../img/wrong.png");
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -209,6 +224,10 @@ body {
 .result-box.hide {
 	display: none;
 }
+.sketch.hide {
+	display: none;
+}
+
 
 .result-box h1 {
 	font-size: 36px;
