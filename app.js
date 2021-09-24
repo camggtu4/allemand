@@ -7,6 +7,7 @@ const answersIndicatorContainer = document.querySelector(".answers-indicator");
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
+const sketchBox = document.querySelector(".sketchBox");
 const questionLimit = 5; // si je veux toutes les questions, remplacer 5 par quiz.lenght
 
 let questionCounter =0;
@@ -141,7 +142,17 @@ function goToHome() {
 	homeBox.classList.remove("hide");
 	resetQuiz();
 }
+function goToHome2() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.remove("hide");
+	resetQuiz();
+}
+function sketch() {
+	homeBox.classList.add("hide");
+	sketchBox.classList.remove("hide");	
+	resetQuiz();
 
+}
 // #### STARTINT POINT ####
 
 function startQuiz() {
@@ -151,6 +162,7 @@ function startQuiz() {
 	getNewQuestion();
 	answersIndicator();
 }
+
 
 window.onload = function () {
 	homeBox.querySelector(".total-question").innerHTML = questionLimit;
