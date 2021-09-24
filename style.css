@@ -44,6 +44,27 @@ body {
 	display: table;
 
 }
+.menu{
+	text-align: left;	
+}
+
+.menu .title-selection {
+	padding-bottom: 10px;
+	text-align: center;
+	border-bottom: 1px solid #cccccc;
+}
+.menu .content-selection {
+	padding-top: 30px;
+	text-align: center;
+}
+.menu .content-selection p{
+	font-size: 20px;
+}
+.menu .content-selection .Select-quiz {
+	margin-bottom: 30px;
+}
+
+
 .home-box h3{
 	font-size: 18px;
 	color: #000000;
@@ -219,7 +240,7 @@ body {
 }
 .quiz-box .answers-indicator div.correct{
 	background-color: green;
-	background-image: url("../img/correct.png");
+	background-image: url("img/correct.png");
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -227,7 +248,7 @@ body {
 
 .quiz-box .answers-indicator div.wrong{
 	background-color: red;
-	background-image: url("../img/wrong.png");
+	background-image: url("img/wrong.png");
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
