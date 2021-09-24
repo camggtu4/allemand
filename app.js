@@ -23,7 +23,7 @@ function  setAvailableQuestions(){
 	}
  
 }
-console.log(quiz.length);n
+console.log(quiz.length);
 function getNewQuestion(){
 	console.log(availableQuestions)
  	questionNumber.innerHTML = "Question " + (questionCounter + 1) + " sur " + questionLimit;
