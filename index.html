@@ -9,12 +9,40 @@
 
 
 
-	<div class="home-box custom-box ">
+					<!-- #### partie menu ####-->
+
+	<div class="menu custom-box">
+		<div class="title-selection">
+			<h1>Menu de sélection</h1>
+		</div>
+
+		<div class="content-selection">
+
+			<div class="Select-quiz">
+				<p> Jouer au Quiz d'allemand :</p>
+				<button type="button" class='btn'onclick="goToHome()"> Quiz</button>
+			</div>
+
+			<div class="Select-Sketch">
+				<p> Réviser le Sketch :</p>
+				<button type="button" class="btn" onclick="sketch()">Sketch</button>
+			</div>
+			<div class="Select-quiz"></div>
+			<div class="Select-quiz"></div>
+		</div>
+	</div>
+
+				<!-- #### partie home ####-->
+
+
+	<div class="home-box custom-box hide">
 		<h3>Questionnaire sur le vocab d'Allemand</h3>
 		<p>Nombre total de questions : <span class="total-question"></span></p>
-		<button type="button" class="btn" onclick="startQuiz()"> Start Quiz</button>
-		<button type="button" class="btn" onclick="sketch()">sketch Allemand </button>
+		<button type="button" class="btn" onclick="startQuiz()"> Commencer</button>
 	</div>
+
+
+					<!-- #### partie quiz ####-->
 
 
 	<div class="quiz-box custom-box hide">
@@ -27,6 +55,14 @@
 		</div>
 		<div class="answers-indicator"></div>
 	</div>
+
+
+
+
+					<!-- #### partie résultats ####-->
+
+
+
 	<div class="result-box custom-box hide ">
 		<h1>Résultats</h1>
 		<table>
@@ -55,8 +91,14 @@
 			</tr>
 		</table>
 		<button type="button" class='btn' onclick="tryAgainQuiz()">Réessayer</button>
-		<button type="button" class='btn'onclick="goToHome()">Retourner au salon</button>
+		<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
 	</div>
+
+
+
+
+
+
 	<div class="sketchBox custom-box hide">
 		<div class="title-sketch">
 			<h3>Sketch pour l'Allemand</h3>
