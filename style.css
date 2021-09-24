@@ -51,7 +51,7 @@ body {
 	margin-bottom: 15px;
 	line-height: 25px;
 }
-.sketch h3{
+.sketchBoxBox h3{
 	font-size: 18px;
 	color: #000000;
 	font-weight: 500;
@@ -66,7 +66,7 @@ body {
 	color: #000000;
 	font-weight: 400;
 }
-.sketch p {
+.sketchBox p {
 	font-size: 16px;
 	margin-bottom: 10px;
 	line-height: 22px;
@@ -98,7 +98,7 @@ body {
 .quiz-box .question-text,
 .quiz-box .option-container,
 .quiz-box .next-question-btn,
-.sketch 
+.sketchBox,
 .quiz-box .answers-indicator {
 	width: 100%;
 	float: left;
@@ -204,7 +204,7 @@ body {
 }
 .quiz-box .answers-indicator div.correct{
 	background-color: green;
-	background-image: url("img/correct.png");
+	background-image: url("../img/correct.png");
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -212,7 +212,7 @@ body {
 
 .quiz-box .answers-indicator div.wrong{
 	background-color: red;
-	background-image: url("img/wrong.png");
+	background-image: url("../img/wrong.png");
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -224,7 +224,7 @@ body {
 .result-box.hide {
 	display: none;
 }
-.sketch.hide {
+.sketchBox.hide {
 	display: none;
 }
 
