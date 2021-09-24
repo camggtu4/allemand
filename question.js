@@ -22,7 +22,7 @@ const quiz = [
 		answer:0
 	},
 	{
-		q:'Que veut dire Urgossmutter ?',
+		q:'Que veut dire Urgrossmutter ?',
 		options:['mamie', 'la Belle-mère','grand-mère',"arrière grand-mère" ],
 		answer:3
 	},
@@ -83,6 +83,32 @@ const quiz = [
 		options:["verstehen " ,' verbringen','verdammen',"vertrauen" ],
 		answer:1
 	},
+	{
+		q:'Comment dit-on marié ?',
+		options:["verheiratet " ,' geschieden','verdammen',"vertrauen" ],
+		answer:1
+	},
+	{
+		q:'Comment dit-on offrir du temps ?',
+		options:["Zeit schenken" ,' verheiratet',' Zeit verheiratet',"Zeit  vertrauen" ],
+		answer:1
+	},
+
+	{
+		q:'Traduis je vais me promener',
+		options:["Ich gehe spazieren" ,' Ich spazieren gehe ',' Ich spazieren',"Ich spaziere" ],
+		answer:1
+	},
+	{
+        q:'Traduire enceinte',
+        options:['schwanger', 'sich langweilen','nah','geschieden' ],
+        answer:0
+    }, 
+    {
+        q:'Traduire wegen',
+        options:['à cause de', 'beaucoup à faire','préparer','passer' ],
+        answer:0
+    }, 
 
 
 	{
