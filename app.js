@@ -9,8 +9,13 @@ const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
 const sketchBox = document.querySelector(".sketchBox");
 const menu = document.querySelector(".menu");
+const formulaireBox = document.querySelector(".form");
 const questionLimit = 10; // si je veux toutes les questions, remplacer 5 par quiz.lenght
 const vocabBox = document.querySelector(".vocab-box");
+const svt = document.querySelector(".menu-svt");
+const chap1Svt = document.querySelector(".chap1-svt");
+const accueil = document.querySelector(".accueil");
+const form = document.querySelector(".form");
 let questionCounter =0;
 let currentQuestion;
 let availableQuestions = [];
@@ -19,6 +24,37 @@ let correctAnswers = 0;
 let attempt = 0;
 
 
+
+
+document.forms['inscription'].addEventListener("submit", function(e) {
+ 
+	var erreur;
+ 
+	var inputs = this;
+ 
+	if (inputs["email"].value != "camille.loisy@outlook.com") {
+		erreur = "Adresse email incorrecte";
+	}
+	// if (inputs["email", "emailConfirm"].value != "camille.loisy@outlook.com") {
+	// 	erreur = "Adresse email incorrecte";
+	// }
+	for (var i = 0; i < inputs.length; i++) {
+		console.log(inputs[i]);
+		if (!inputs[i].value) {
+			erreur = "Veuillez renseigner tous les champs";
+		}
+	}
+	if (erreur) {
+		e.preventDefault();
+		document.getElementById("erreur").innerHTML = erreur;
+		return false;
+	} else {
+		//alert('Formulaire envoyé !');
+		e.preventDefault();
+		connexion();
+	}
+	
+});
 
 console.log(questionLimit);
 function  setAvailableQuestions(){
@@ -128,6 +164,12 @@ function quizResult() {
 	resultBox.querySelector(".percentage").innerHTML = percentage.toFixed(2) + "%";
 	resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + questionLimit;
 }
+
+
+
+
+
+
 function resetQuiz() {
  questionCounter =0;
  correctAnswers = 0;
@@ -136,16 +178,34 @@ function resetQuiz() {
 }
 
 function tryAgainQuiz() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
 	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	svt.classList.add("hide");
 	quizBox.classList.remove("hide");
+	chap1Svt.classList.add("hide");
+
 	resetQuiz();
 	startQuiz();
 }
 function goToHome() {
+	sketchBox.classList.add("hide");
+	
+	vocabBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	menu.classList.add("hide");
-	vocabBox.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	svt.classList.add("hide");
 	homeBox.classList.remove("hide");
+	chap1Svt.classList.add("hide");
 	resetQuiz();
 }
 function goToHome2() {
@@ -153,32 +213,133 @@ function goToHome2() {
 	homeBox.classList.add("hide");
 	vocabBox.classList.add("hide");
 	resultBox.classList.add("hide");
-	menu.classList.remove("hide");
+	menu.classList.add("hide");
+	accueil.classList.remove("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	svt.classList.add("hide");
+	chap1Svt.classList.add("hide");
 	resetQuiz();
 }
 function sketch() {
+	sketchBox.classList.remove("hide");
 	homeBox.classList.add("hide");
-	sketchBox.classList.remove("hide");	
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
 	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	chap1Svt.classList.add("hide");
+	svt.classList.add("hide");
 	resetQuiz();
+	//Text.innerHTML(sketch);
 
 }
 function vocab() {
+	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
-	sketchBox.classList.add("hide");	
-	menu.classList.add("hide");
 	vocabBox.classList.remove("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	chap1Svt.classList.add("hide")
+	svt.classList.add("hide");
 	resetQuiz();
+}
+function connexion() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	accueil.classList.remove("hide");
+	chap1Svt.classList.add("hide");
+	svt.classList.add("hide");
+	resetQuiz();
+}
+function allemand() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.remove("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	svt.classList.add("hide");
+	chap1Svt.classList.add("hide");
+
 }
 // #### STARTINT POINT ####
 
 function startQuiz() {
+	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
 	quizBox.classList.remove("hide");
+	chap1Svt.classList.add("hide");
+	svt.classList.add("hide");
 	setAvailableQuestions();
 	getNewQuestion();
 	answersIndicator();
 }
+function svt1() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	svt.classList.remove("hide");
+	chap1Svt.classList.add("hide");
+}
+function chap1() {
+	chap1Svt.classList.remove("hide");
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	svt.classList.add("hide");
+}
+function deconnexion() {
+	chap1Svt.classList.add("hide");
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	svt.classList.add("hide");
+	quizBox.classList.add("hide");
+	form.classList.remove("hide");
+}
+
+
 
 
 window.onload = function () {
