@@ -156,7 +156,7 @@ main {
 ** RESPONSIVE
 */
 
-/*
+
 @media only screen and (max-width:1024px) {
   .navbar {
     top:auto;
@@ -193,7 +193,7 @@ main {
   .navbar-link {
     justify-content: center;
   }
-}*/
+}
 
 /*header {
 	width: 100%;
