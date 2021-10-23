@@ -1,0 +1,7 @@
+
+const sketch2 = { dataSketch:"A- Hallo Cousin, wie läuft deine Ferien? C- Genial, danke! Und du, wie geht‘s?A- Es geht mir gut.C- Was hast du in deinen Ferien gemacht? A- Ich bin auf den Markt gegangen mit Bruno und Katrin, und wir haben viel Zeit in den Geschäften verbracht. C- Ok, es ist cool! Ich habe München und seine Kirche, die St Pierre Kirche besucht. A- Schön! A- Und wie geht’s Tante Paula ? C- Oh, es geht ihr gut ! A- Es ist schon eine Weile, dass ich sie gesehen habe. A- Geht es deinem Vater gut ? C- Ja, er hat noch viel Energie!A- Gut !C- Geht es Ihrer Familie gut? A- Ja, allen geht es gut. C- so viel besser. A- Tschüss, Cousin ! C- Tschüss. "
+};
+const card = '<div class="card"> <p>A- Hallo Cousin, wie läuft deine Ferien?<br> C- Genial, danke! Und du, wie geht‘s? <br>A- Es geht mir gut. <br>C- Was hast du in deinen Ferien gemacht? <br>A- Ich bin auf den Markt gegangen mit Bruno und Katrin, und wir haben viel Zeit in den Geschäften verbracht. <br> C- Ok, es ist cool! Ich habe München und seine Kirche, die St Pierre Kirche besucht. <br> A- Schön! A- Und wie geht’s Tante Paula ? <br>C- Oh, es geht ihr gut !<br> A- Es ist schon eine Weile, dass ich sie gesehen habe. <br>A- Geht es deinem Vater gut ? <br>C- Ja, er hat noch viel Energie!A- Gut !<br>C- Geht es Ihrer Familie gut?  <br> A- Ja, allen geht es gut.<br> C- so viel besser. <br>A- Tschüss, Cousin !<br> C- Tschüss. </p> </div>'
+
+document.querySelector(".content-sketch").innerHTML = card;
+

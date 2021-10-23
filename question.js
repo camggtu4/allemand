@@ -86,7 +86,7 @@ const quiz = [
 	{
 		q:'Comment dit-on marié ?',
 		options:["verheiratet " ,' geschieden','verdammen',"vertrauen" ],
-		answer:1
+		answer:0
 	},
 	{
 		q:'Comment dit-on offrir du temps ?',
@@ -94,7 +94,7 @@ const quiz = [
 		answer:1
 	},
 
-	{
+	{ 
 		q:'Traduis je vais me promener',
 		options:["Ich gehe spazieren" ,' Ich spazieren gehe ',' Ich spazieren',"Ich spaziere" ],
 		answer:1
