@@ -1,17 +1,147 @@
+
 <!DOCTYPE html>
+
 <html>
 <head>
 	<title>Quiz App</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/4b18bd0197.js" crossorigin="anonymous"></script>
+ 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 </head>
 <body>
+		<nav class="navbar">
+		<ul class="navbar-menu">
+			<li class="navbar-item logo">
+				<a href="#" class="navbar-link" onclick="">
+					<span class="navbar-title "></span>
+					<i class="fas fa-bars navbar-icon"></i>
+				</a>
+			</li>
+		</ul>
+			
+		<ul class="navbar-menu">
+			<li class="navbar-item">
+				<a href="#" class="navbar-link" onclick="goToHome2()">
+					<i class="fas fa-home navbar-icon "></i>
+					<span class="navbar-title">Home</span>
+				</a>
+			</li>
+		</ul>
+
+		<ul class="navbar-menu">
+			<li class="navbar-item">
+				<a href="#" class="navbar-link" onclick="allemand()">
+					<i class="fas fa-language navbar-icon "></i>
+					<span class="navbar-title">Allemand</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="navbar-menu">
+			<li class="navbar-item">
+				<a href="#" class="navbar-link" onclick="svt1()">
+					<i class="fab fa-react navbar-icon"></i>
+					<span class="navbar-title">SVT</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="navbar-menu">
+			<li class="navbar-item">
+				<a href="#" class="navbar-link" onclick="">
+					<i class="fas fa-landmark navbar-icon"></i>
+					<span class="navbar-title">Histoire-géo</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="navbar-menu">
+			<li class="navbar-item">
+				<a href="#" class="navbar-link" onclick="">
+					<i class="fas fa-infinity navbar-icon"></i>
+					<span class="navbar-title">Maths</span>
+				</a>
+			</li>
+		</ul>
+
+
+
+			<!-- <div class="logo">
+				Logo
+			</div>
+			<div class="nav-buttons">	
+				<div class="allemand nav-btn">
+					<button class="btn2" onclick="allemand()">Allemand</button>
+				</div>
+				<div class="svt nav-btn">
+					<button class="btn2" onclick="svt1()">SVT</button>
+				</div>
+				<div class="hg nav-btn">
+					<button class="btn2">Histoire-Géo</button>
+				</div>
+				<div class="maths nav-btn">
+					<button class="btn2">Mathématiques</button>
+				</div>
+			</div>-->
+	</nav>
+	<div class="logOut">
+		<button class="btn3 logout navbar-title" onclick="deconnexion()">Déconnexion</button>
+	</div>
+<main>
+
+			<!-- #### partie accueil ####-->
+	
+	<div class="accueil custom-box  ">
+		<div class="title-selection">
+			<h2>Bienvenue !</h2>
+		</div>
+
+		<div class="content-selection">
+			<h3> Salut, ici tu trouveras :</h3>
+			<p>
+				-Des cours pour réviser<br>
+				-Un quiz <br>
+				-Le vocabulaire d'Allemand<br>
+				-Et pleins d'autres choses je suppose(dans le futur) <br>
+			</p>
+			<p> Et oui je sais pour l'instant l'accueil est vide et moche, mais flemme de le faire mtn</p>
+		</div>
+	</div>
+					<!-- #### partie formulaire ####-->
+<div class="form custom-box hide">	
+		<div class="input-data">
+			<form  name="inscription">
+				<label for="name" class="label-name">
+				Pseudo
+				</label>
+				<div class="underline"></div>
+				<input type="text" name="pseudo" >
+
+				<label for="email" class="label-email">
+					Email
+				</label>
+				<input type="text" name="email">
+		
+				<label for="emailConfirm" class="label-emailConfirm">
+					Confirmation de l'Email
+				</label>
+				<input type="text" name="email-confirm" > 
+
+				<label for="mdp" class="label-mdp">
+					Mot de Passe
+				</label>
+				<input type="password" name="mdp"> 
+
+				<input type="submit"  class="btn" value="Inscription" >
+			</form>
+		</div>
+		<p style="color: red"; id="erreur"></p>
+</div>
 
 
 
 					<!-- #### partie menu ####-->
 
-	<div class="menu custom-box">
+	<div class="menu custom-box hide ">
 		<div class="title-selection">
 			<h2>Menu de sélection</h2>
 		</div>
@@ -23,12 +153,12 @@
 				<button type="button" class='btn'onclick="goToHome()"> Quiz</button>
 			</div>
 
-			<div class="Select-Sketch">
+			<div class="Select-sketch">
 				<p> Réviser le Sketch :</p>
 				<button type="button" class="btn" onclick="sketch()">Sketch</button>
 			</div>
 			<div class="Select-vocab"> 
-				<p>Carnets de vocabulaire</p>
+				<p>Carnets de vocabulaire :</p>
 				<button type="button" class="btn" onclick="vocab()">Vocab</button>
 			</div>
 			<div class="Select-quiz"></div>
@@ -126,31 +256,57 @@
 			<h3>Sketch pour l'Allemand</h3>
 		</div>
 		<div class="content-sketch"></div>
-		<p>A- Hallo Cousin, wie läuft deine Ferien?<br>
-			C- Genial, danke! Und du, wie geht‘s?<br>
-			A- Es geht mir gut. <br>
-			C- Was hast du in deinen Ferien gemacht? <br>
-			A- Ich bin auf den Markt gegangen mit Bruno und Katrin, und wir haben viel Zeit in den Geschäften verbracht. <br>
-			C- Ok, es ist cool! Ich habe München und seine Kirche, die St Pierre Kirche besucht. <br>
-			A- Schön! <br>
-			A- Und wie geht’s Tante Paula ? <br>
-			C- Oh, es geht ihr gut ! <br>
-			A- Es ist schon eine Weile, dass ich sie gesehen habe. <br>
-			A- Geht es deinem Vater gut ? <br>
-			C- Ja, er hat noch viel Energie! <br>
-			A- Gut ! <br>
-			C- Geht es Ihrer Familie gut? <br>
-			A- Ja, allen geht es gut. <br>
-			C- so viel besser. <br>
-			A- Tschüss, Cousin !> <br>
-			C- Tschüss. <br>
-			</p>
 		<div class="button-back">
 			<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
 		</div>
 	</div>
-<script src="question.js"></script>
-<script src="app.js"></script>
+
+
+						<!-- #### partie SVT ####-->
+
+	<div class="menu-svt custom-box hide ">
+		<div class="title-selection">
+			<h2>Cours de SVT</h2>
+		</div>
+
+		<div class="content-selection">
+
+			<div class="Select-quiz">
+				<p> Chapitre 1 : </p>
+				<button type="button" class='btn'onclick="chap1()"> Chapitre 1</button>
+			</div>
+
+			<div class="Select-sketch">
+				<p> Chapitre 2 : </p>
+				<button type="button" class="btn" onclick="">Chapitre 2</button>
+			</div>
+			<div class="Select-vocab"> 
+				<p>Chapitre 3 : </p>
+				<button type="button" class="btn" onclick="">Chapitre 3</button>
+			</div>
+			<div class="Select-quiz"></div>
+		</div>
+	</div>
+
+
+	<div class="chap1-svt custom-box hide">
+		<div class="">
+			<h2 class="title-chap1"></h2>
+		</div>
+		<div class="content-chap1I"></div>
+		<div class="content-chap1II"></div>
+		<button type="button" class="btn" onclick="svt1()">Retour au menu</button>
+	</div>
+
+</main>
+
+	
+
+<script src="js/question.js"></script>
+<script src="js/app.js"></script>
+<script src="js/svt.js"></script>
+<script src="js/sketch.js"></script>
+
 </body>
 </html>
 
