@@ -1,4 +1,4 @@
-
+ 
 //arrays of Objects
 const quiz = [
 	{
@@ -93,7 +93,6 @@ const quiz = [
 		options:["Zeit schenken" ,' verheiratet',' Zeit verheiratet',"Zeit  vertrauen" ],
 		answer:1
 	},
-
 	{ 
 		q:'Traduis je vais me promener',
 		options:["Ich gehe spazieren" ,' Ich spazieren gehe ',' Ich spazieren',"Ich spaziere" ],
@@ -109,12 +108,74 @@ const quiz = [
         options:['à cause de', 'beaucoup à faire','préparer','passer' ],
         answer:0
     }, 
-
-
 	{
 		q:'Comment dit-on comprendre ?',
 		options:['deshalb', 'verbringen','fragen',"verstehen" ],
 		answer:3
+	},
+	{
+		q:'Comment dit-on déménager ?',
+		options:['ganzen', 'verbringen','zehen',"ziehen" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on dans le monde ?',
+		options:['ganzen', 'der Gründer','der Wald',"das Welt" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on  l\'experience ?',
+		options:['die Zahl', 'die Gemeinschaft','die Wohngemeinschaft',"die Erfahrung" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on  le nombre ?',
+		options:['die Erfahrung', 'unter','die Beerdigung',"die Zahl" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on  l\'enterrement ?',
+		options:['die Erfahrung', 'Weihnachten','die Miete',"die Beerdigung" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on  le loyer ?',
+		options:['die Zeitschrift', 'die Zahl','die Erde',"die Miete" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on  la terre ?',
+		options:['der Beruf', 'der Grund','die Miete',"die Erde" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on  le métier ?',
+		options:['ziehen', 'die Beerdigung','der Gründer',"die Beruf" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on pas le temps ?',
+		options:['nicht Zeit haben', 'nicht Zeit','ohne Zeit',"keine Zeit" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on pas le temps ?',
+		options:['nicht Zeit haben', 'nicht Zeit','ohne Zeit',"keine Zeit" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on a cause de ?',
+		options:['allein', 'jünger','bewegen',"wegen" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on seul ?',
+		options:['bewegen', 'jünger','von',"allein" ],
+		answer:3
+	},
+	{
+		q:'Comment dit-on noël ?',
+		options:['tannenbaum', 'den Tan','die Gemeinschaft',"Weihnachten" ],
+		answer:3
 	}
-
 ]
