@@ -299,6 +299,22 @@ function startQuiz() {
 	getNewQuestion();
 	answersIndicator();
 }
+
+function trucQuiz() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.remove("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	chap1Svt.classList.add("hide");
+	svt.classList.add("hide");
+}
+
+
 function svt1() {
 	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
