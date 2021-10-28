@@ -16,6 +16,8 @@ const svt = document.querySelector(".menu-svt");
 const chap1Svt = document.querySelector(".chap1-svt");
 const accueil = document.querySelector(".accueil");
 const form = document.querySelector(".form");
+const navbar = document.querySelector(".navbar");
+const navbarTruc = document.querySelector(".navbar-truc");
 let questionCounter =0;
 let currentQuestion;
 let availableQuestions = [];
@@ -164,11 +166,11 @@ function quizResult() {
 	resultBox.querySelector(".percentage").innerHTML = percentage.toFixed(2) + "%";
 	resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + questionLimit;
 }
-
-
-
-
-
+navbar.addEventListener('mouseover', ()=> {
+navbar.addEventListener('mouseout', ()=> {
+	navBarHide();
+});
+});
 
 function resetQuiz() {
  questionCounter =0;
@@ -195,16 +197,15 @@ function tryAgainQuiz() {
 }
 function goToHome() {
 	sketchBox.classList.add("hide");
-	
 	vocabBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	menu.classList.add("hide");
-	accueil.classList.add("hide");
+	accueil.classList.remove("hide");
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
 	svt.classList.add("hide");
-	homeBox.classList.remove("hide");
+	homeBox.classList.add("hide");
 	chap1Svt.classList.add("hide");
 	resetQuiz();
 }
@@ -213,8 +214,8 @@ function goToHome2() {
 	homeBox.classList.add("hide");
 	vocabBox.classList.add("hide");
 	resultBox.classList.add("hide");
-	menu.classList.add("hide");
-	accueil.classList.remove("hide");
+	menu.classList.remove("hide");
+	accueil.classList.add("hide");
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
@@ -339,6 +340,16 @@ function deconnexion() {
 	form.classList.remove("hide");
 }
 
+
+
+function navBarShow () {
+	navbarTruc.classList.add("hide");
+	navbar.classList.remove("hide");
+}
+function navBarHide () {
+	navbarTruc.classList.remove("hide");
+	navbar.classList.add("hide");
+}
 
 
 
