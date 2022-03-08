@@ -1,5 +1,3 @@
-
-
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
@@ -12,12 +10,11 @@ const menu = document.querySelector(".menu");
 const formulaireBox = document.querySelector(".form");
 const questionLimit = 10; // si je veux toutes les questions, remplacer 5 par quiz.lenght
 const vocabBox = document.querySelector(".vocab-box");
-const svt = document.querySelector(".menu-svt");
-const chap1Svt = document.querySelector(".chap1-svt");
+const spc = document.querySelector(".menu-spc");
 const accueil = document.querySelector(".accueil");
+const video = document.querySelector(".video-box");
 const form = document.querySelector(".form");
-const navbar = document.querySelector(".navbar");
-const navbarTruc = document.querySelector(".navbar-truc");
+const about = document.querySelector(".about-box")
 let questionCounter =0;
 let currentQuestion;
 let availableQuestions = [];
@@ -52,7 +49,6 @@ document.forms['inscription'].addEventListener("submit", function(e) {
 		return false;
 	} else {
 		//alert('Formulaire envoyé !');
-		e.preventDefault();
 		connexion();
 	}
 	
@@ -72,7 +68,7 @@ function getNewQuestion(){
  	questionNumber.innerHTML = "Question " + (questionCounter + 1) + " sur " + questionLimit;
  	const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
  	currentQuestion = questionIndex;
- 	questionText.innerHTML = currentQuestion.q;
+ 	questionText.innerHTML = currentQuestion;
 
  	const index1 = availableQuestions.indexOf(questionIndex);
  	availableQuestions.splice(index1,1);
@@ -166,11 +162,11 @@ function quizResult() {
 	resultBox.querySelector(".percentage").innerHTML = percentage.toFixed(2) + "%";
 	resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + questionLimit;
 }
-navbar.addEventListener('mouseover', ()=> {
-navbar.addEventListener('mouseout', ()=> {
-	navBarHide();
-});
-});
+
+
+
+
+
 
 function resetQuiz() {
  questionCounter =0;
@@ -188,15 +184,46 @@ function tryAgainQuiz() {
 	accueil.classList.add("hide");
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
-	svt.classList.add("hide");
+	spc.classList.add("hide");
 	quizBox.classList.remove("hide");
-	chap1Svt.classList.add("hide");
+	video.classList.add("hide");
 
 	resetQuiz();
 	startQuiz();
 }
+function aboutFonct() {
+	sketchBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	spc.classList.add("hide");
+	homeBox.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.remove("hide");
+}
 function goToHome() {
 	sketchBox.classList.add("hide");
+	
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	spc.classList.add("hide");
+	homeBox.classList.remove("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
+	resetQuiz();
+}
+function goToHome2() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
 	vocabBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	menu.classList.add("hide");
@@ -204,12 +231,13 @@ function goToHome() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
-	svt.classList.add("hide");
-	homeBox.classList.add("hide");
-	chap1Svt.classList.add("hide");
+	spc.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 	resetQuiz();
 }
-function goToHome2() {
+
+function goToHome3() {
 	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
 	vocabBox.classList.add("hide");
@@ -219,10 +247,11 @@ function goToHome2() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
-	svt.classList.add("hide");
-	chap1Svt.classList.add("hide");
-	resetQuiz();
+	spc.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 }
+
 function sketch() {
 	sketchBox.classList.remove("hide");
 	homeBox.classList.add("hide");
@@ -233,8 +262,9 @@ function sketch() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
-	chap1Svt.classList.add("hide");
-	svt.classList.add("hide");
+	spc.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 	resetQuiz();
 	//Text.innerHTML(sketch);
 
@@ -249,8 +279,9 @@ function vocab() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
-	chap1Svt.classList.add("hide")
-	svt.classList.add("hide");
+	spc.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 	resetQuiz();
 }
 function connexion() {
@@ -263,8 +294,9 @@ function connexion() {
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
 	accueil.classList.remove("hide");
-	chap1Svt.classList.add("hide");
-	svt.classList.add("hide");
+	spc.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 	resetQuiz();
 }
 function allemand() {
@@ -277,8 +309,9 @@ function allemand() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
-	svt.classList.add("hide");
-	chap1Svt.classList.add("hide");
+	spc.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 
 }
 // #### STARTINT POINT ####
@@ -293,29 +326,14 @@ function startQuiz() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.remove("hide");
-	chap1Svt.classList.add("hide");
-	svt.classList.add("hide");
+	spc.classList.add("hide");
+	about.classList.add("hide");
 	setAvailableQuestions();
 	getNewQuestion();
 	answersIndicator();
+	video.classList.add("hide");
 }
-
-function trucQuiz() {
-	sketchBox.classList.add("hide");
-	homeBox.classList.remove("hide");
-	vocabBox.classList.add("hide");
-	resultBox.classList.add("hide");
-	menu.classList.add("hide");
-	accueil.classList.add("hide");
-	formulaireBox.classList.add("hide");
-	resultBox.classList.add("hide");
-	quizBox.classList.add("hide");
-	chap1Svt.classList.add("hide");
-	svt.classList.add("hide");
-}
-
-
-function svt1() {
+function spc1() {
 	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
 	vocabBox.classList.add("hide");
@@ -325,11 +343,12 @@ function svt1() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
-	svt.classList.remove("hide");
-	chap1Svt.classList.add("hide");
+	spc.classList.remove("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 }
-function chap1() {
-	chap1Svt.classList.remove("hide");
+
+function videos() {
 	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
 	vocabBox.classList.add("hide");
@@ -339,10 +358,12 @@ function chap1() {
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
 	quizBox.classList.add("hide");
-	svt.classList.add("hide");
+	spc.classList.add("hide");
+	video.classList.remove("hide");
+	about.classList.add("hide");
 }
+
 function deconnexion() {
-	chap1Svt.classList.add("hide");
 	sketchBox.classList.add("hide");
 	homeBox.classList.add("hide");
 	vocabBox.classList.add("hide");
@@ -351,21 +372,13 @@ function deconnexion() {
 	accueil.classList.add("hide");
 	formulaireBox.classList.add("hide");
 	resultBox.classList.add("hide");
-	svt.classList.add("hide");
+	spc.classList.add("hide");
 	quizBox.classList.add("hide");
 	form.classList.remove("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
 }
 
-
-
-function navBarShow () {
-	navbarTruc.classList.add("hide");
-	navbar.classList.remove("hide");
-}
-function navBarHide () {
-	navbarTruc.classList.remove("hide");
-	navbar.classList.add("hide");
-}
 
 
 
