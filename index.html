@@ -1,30 +1,39 @@
+<!-- <?php
+
+$bdd = new PDO('mysql:host=127.0.0.1;dbname=allemand', 'root', '');
+
+$membres = $bdd->query('SELECT * FROM membres')
+
+?> -->
 <!DOCTYPE html>
+
 <html>
 <head>
+
+
 	<title>Quiz App</title> 
-	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://kit.fontawesome.com/4b18bd0197.js" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/4b18bd0197.js" crossorigin="anonymous"></script>
  	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    
 </head>
-
-
-</div>
 <body>
-		<nav class="navbar hide">
-			<ul class=" navbar-buton">
-				<li class="navbar-item logo">
-					<a href="#" class="navbar-link" onclick="">
-						<span class="navbar-title "></span>
-						<i class="fas fa-bars navbar-icon"></i>
-					</a>
-				</li>
-			</ul>	
+	<nav class="navbar ">
+		<ul class="navbar-menu">
+			<li class="navbar-item logo">
+				<a href="#" class="navbar-link" onclick="">
+					<span class="navbar-title "></span>
+					<i class="fas fa-bars navbar-icon"></i>
+				</a>
+			</li>
+		</ul>
+			
 		<ul class="navbar-menu">
 			<li class="navbar-item">
-				<a href="#" class="navbar-link" onclick="goToHome()">
+				<a href="#" class="navbar-link" onclick="goToHome2()">
 					<i class="fas fa-home navbar-icon "></i>
 					<span class="navbar-title">Home</span>
 				</a>
@@ -41,9 +50,9 @@
 		</ul>
 		<ul class="navbar-menu">
 			<li class="navbar-item">
-				<a href="#" class="navbar-link" onclick="svt1()">
+				<a href="#" class="navbar-link" onclick="spc1()">
 					<i class="fab fa-react navbar-icon"></i>
-					<span class="navbar-title">SVT</span>
+					<span class="navbar-title">SPC</span>
 				</a>
 			</li>
 		</ul>
@@ -51,7 +60,7 @@
 			<li class="navbar-item">
 				<a href="#" class="navbar-link" onclick="">
 					<i class="fas fa-landmark navbar-icon"></i>
-					<span class="navbar-title">Hist-géo</span>
+					<span class="navbar-title">Histoire-géo</span>
 				</a>
 			</li>
 		</ul>
@@ -84,21 +93,17 @@
 				</div>
 			</div>-->
 	</nav>
-	<div class="group-navbar-truc-logOut">
-		<div class="navbar-truc">
-			<a href="#" class="navbar-link2" onclick="navBarShow()">
-				<i class="fas fa-bars navbar-icon"></i>
-			</a>
-		</div>
-<!-- 		<div class="logOut hide">
-			<button class="btn3 logout" onclick="deconnexion()">Déconnexion</button>
-		</div>  -->
+	<!-- <div class="logOut">
+		<button class="btn3 logout navbar-title" onclick="deconnexion()">Déconnexion</button>
+	</div> -->
+	<div class="logOut">
+		<button class="btn3 logout navbar-title" onclick="aboutFonct()">En savoir plus</button>
 	</div>
 <main>
 
 			<!-- #### partie accueil ####-->
 	
-	<div class="accueil custom-box">
+	<div class="accueil custom-box  ">
 		<div class="title-selection">
 			<h2>Bienvenue !</h2>
 		</div>
@@ -112,8 +117,6 @@
 				-Et pleins d'autres choses je suppose(dans le futur) <br>
 			</p>
 			<p> Et oui je sais pour l'instant l'accueil est vide et moche, mais flemme de le faire mtn</p>
-			<h3>DISCLAMER : CE SITE N'EST PAS FINI</h3>
-			<p>(je le précise même si ça se voit)</p>
 		</div>
 	</div>
 					<!-- #### partie formulaire ####-->
@@ -149,7 +152,7 @@
 
 
 
-					<!-- #### partie menu allemand ####-->
+					<!-- #### partie menu ####-->
 
 	<div class="menu custom-box hide ">
 		<div class="title-selection">
@@ -160,7 +163,7 @@
 
 			<div class="Select-quiz">
 				<p> Jouer au Quiz d'allemand :</p>
-				<button type="button" class='btn'onclick="trucQuiz()"> Quiz</button>
+				<button type="button" class='btn'onclick="goToHome()"> Quiz</button>
 			</div>
 
 			<div class="Select-sketch">
@@ -170,8 +173,11 @@
 			<div class="Select-vocab"> 
 				<p>Carnets de vocabulaire :</p>
 				<button type="button" class="btn" onclick="vocab()">Vocab</button>
-			</div>
-			<div class="Select-quiz"></div>
+			</div> <br> <br>
+			<div class="Select-Videos">
+				<p>Retrouvez toutes les vidéos ici :<p>
+				<button type="button" class="btn" onclick="videos()">Vidéos</button>
+			</div>  
 		</div>
 	</div>
 
@@ -190,7 +196,7 @@
 			<button type="button" class=""><a href="img/2gt2.doc" download="Vocab 2GT2" class="btn">Télécharger</a></button>
 		</div>
 		<div class="button-back">
-			<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
+			<button type="button" class='btn'onclick="goToHome3()">Retourner au salon</button>
 		</div>
 	</div>
 
@@ -213,7 +219,6 @@
 		<div class="option-container"></div>
 		<div class="next-question-btn">
 			<button type="button" class="btn" onclick="next()">Suivant </button>
-
 		</div>
 		<div class="answers-indicator"></div>
 	</div>
@@ -252,9 +257,24 @@
 				<ta><span class="total-score"></span></ta>
 			</tr>
 		</table>
-		<button type="button" class='btn' onclick="tryAgainQuiz()">Réessayer</button>
-		<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
+		<button type="button" class='btn' onclick="AgainQuiz()">Réessayer</button>
+		<button type="button" class='btn'onclick="goToHome3()">Retourner au salon</button>
 	</div>
+
+
+					<!-- #### partie vidéos d'allemand ####-->
+
+	<div class="video-box custom-box hide">
+		<div class="title-videos">
+			<h1>Voici toutes les vidéos vues en classe !</h1>
+			 <div class="content-videos">
+				<div class="video-berlin">
+					<p>Vidéo sur le mur de Berlin : </p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/UQcKMxpU2bQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div> 
+		</div> 
+	</div>  
 
 
 
@@ -267,55 +287,91 @@
 		</div>
 		<div class="content-sketch"></div>
 		<div class="button-back">
-			<button type="button" class='btn'onclick="goToHome2()">Retourner au salon</button>
+			<button type="button" class='btn'onclick="goToHome3()">Retourner au salon</button>
 		</div>
 	</div>
 
 
-						<!-- #### partie SVT ####-->
+						<!-- #### partie SPC ####-->
 
-	<div class="menu-svt custom-box hide ">
+	<div class="menu-spc custom-box hide ">
 		<div class="title-selection">
-			<h2>Cours de SVT</h2>
+			<h2>Cours de SPC</h2> 
 		</div>
 
 		<div class="content-selection">
+			<br><br>
+			<h4 class="title-chap1">Cours sur les corps pures et les mélanges :</h4> <br>
+			<button type="button" class=""><a href="img/spc/cours1-mélanges.pdf" download="SPC cours corps pures et mélanges" class="btn">Télécharger</a></button> <br> <br> <br>
 
-			<div class="Select-quiz">
-				<p> Chapitre 1 : </p>
-				<button type="button" class='btn'onclick="chap1()"> Chapitre 1</button>
-			</div>
+			<h4 class="title-chap1">Cours sur les solutions :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours2-solutions.pdf" download="SPC cours solutions" class="btn">Télécharger</a></button> <br> <br> <br>
 
-			<div class="Select-sketch">
-				<p> Chapitre 2 : </p>
-				<button type="button" class="btn" onclick="">Chapitre 2</button>
+			<h4 class="title-chap1">Cours  sur les cortèges électoniques :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours3-cortège-electronique.pdf" download="SPC cours cortège électronique" class="btn">Télécharger</a></button> <br> <br> <br>
+
+			<h4 class="title-chap1">Cours  sur l'émission et la perception d'un son :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours4-preception-d'un-son.pdf" download="SPC cours perception son" class="btn">Télécharger</a></button> <br> <br> <br>
+
+			<h4 class="title-chap1">Cours regroupant l'électrécité et le son :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours5-electrecite+son.pdf" download="SPC cours son et électrécité" class="btn">Télécharger</a></button> <br> <br> <br>
+
+			<h4 class="title-chap1">Cours sur la mole :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours6-la-mole.pdf" download="SPC cours sur la mole" class="btn">Télécharger</a></button> <br> <br> <br>
+
+			<h4 class="title-chap1">Cours sur la stabilité des éléments chimiques :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours7-stabilite-entite-chimiques.pdf" download="SPC cours stabilité des éléments chimiques" class="btn">Télécharger</a></button> <br> <br> <br>
+
+			<h4 class="title-chap1">Cours sur les transformations nucléaires :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours8-transformation-nucleaire.pdf" download="SPC cours transformations nucléaires" class="btn">Télécharger</a></button> <br> <br> <br>
+
+			<h4 class="title-chap1">Cours sur comment décrire un mouvement :</h4><br>
+			<button type="button" class=""><a href="img/spc/cours9-decrire-un-mouvement.pdf" download="SPC cours décrire un mouvement" class="btn">Télécharger</a></button> <br> <br><br>
+		</div>
+	</div>
+
+					<!-- #### partie en savoir plus ####-->
+
+
+	<div class="about-box custom-box hide">
+		<div class="learn-more">
+			<h1 class="title-learn-more">En savoir plus</h1>
+			<h2 class="title-geographical"> Notre situation géographique</h2>
+			<div class="geographical-location">
+				<p> Oui, nous sommes installés dans le village le plus pauvre de France, Marboz ! Vrm c'est pire que la creuse </p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37053.788056207064!2d5.218723497613385!3d46.348764910763016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f34bb91271ea07%3A0xa3a999bc67ba7ca2!2s01851%20Marboz!5e0!3m2!1sfr!2sfr!4v1646685099293!5m2!1sfr!2sfr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> 
 			</div>
-			<div class="Select-vocab"> 
-				<p>Chapitre 3 : </p>
-				<button type="button" class="btn" onclick="">Chapitre 3</button>
+			<div class="contact-us">
+				<h2 class="title-contact"> Nos contacts</h2>
+				<div class="contact-box">
+					<table class="contact-box-table">
+						<tr>
+							<th>Discord</th>
+							<th>Twitter</th>
+							<th>Mail</th>
+						</tr>
+						<tr>
+							<td><form action="https://discord.gg/amongusfr"><button class="contact-button button52" type="submit">Notre Discord ICI</button></form></td>
+							<td> <form action="https://twitter.com/LinusTech"><button class="contact-button" type="submit">Notre Twitter ICI<!-- <a><i class="fa-brands fa-twitter"></i></a> --></button></form></td>
+							<td><p>allemand.mail@gmail.com</p></td>
+						</tr>
+
+					</table>
+				</div>
 			</div>
-			<div class="Select-quiz"></div>
 		</div>
 	</div>
 
 
-	<div class="chap1-svt custom-box hide">
-		<div class="">
-			<h2 class="title-chap1"></h2>
-		</div>
-		<div class="content-chap1I"></div>
-		<div class="content-chap1II"></div>
-		<button type="button" class="btn" onclick="svt1()">Retour au menu</button>
-	</div>
+
 
 </main>
+	<script src="js/question.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/spc.js"></script>
+	<script src="js/sketch.js"></script>
 
-	
 
-<script src="question.js"></script>
-<script src="app.js"></script>
-<script src="svt.js"></script>
-<script src="sketch.js"></script>
 
 </body>
 </html>
