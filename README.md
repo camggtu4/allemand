@@ -1,3 +1,3 @@
 # allemand
-Config files for my GitHub profile.
+ https://camggtu4.github.io/allemand/
 encore un README ultra inutile
