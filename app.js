@@ -385,4 +385,3 @@ function deconnexion() {
 window.onload = function () {
 	homeBox.querySelector(".total-question").innerHTML = questionLimit;
 }
-
