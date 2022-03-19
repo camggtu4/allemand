@@ -216,7 +216,7 @@ header .nav {
 	margin-left: 5px;
 	margin-right: 5px;
 }
- .nav-buttons {
+ .nav-buttonsa {
 	text-align: center;
 	display: inline-flex;
 
@@ -333,10 +333,13 @@ header .nav {
 	padding-top: 30px;
 	text-align: center;
 }
+.menu-svt .content-selection,
 .menu-spc .content-selection {
 	padding-top: 30px;
 	text-align: center;
 }
+
+.menu-svt .content-selection p,
 .menu-spc .content-selection p,
 .menu .content-selection p{
 	font-size: 20px;
@@ -549,6 +552,7 @@ header .nav {
 
 }
 .nav.hide,
+.menu-svt.hide,
 .menu-spc.hide,
 .result-box.hide,
 .formulaireBox.hide,
@@ -629,14 +633,19 @@ header .nav {
 .contact-box-table{
 	border-collapse: collapse;
 }
+.contact-box-table td,
 .contact-box-table th {
 	text-align: center;
+	padding: 10px;
 }
 
-.contact-box-table tr th, td {
+/*.contact-box-table tr th, td {
 	border: 1px solid silver;
 	padding: 10px;
-	border-radius: 5px;
+}*/
+.contact-box table {
+	box-shadow: 0 5px 12px 0 rgba(0,0,0,0.2), 0 4px 15px 0 rgba(0,0,0,0.19);
+	border-radius: 15px;
 }
 
 
@@ -664,4 +673,12 @@ header .nav {
   margin: 0 1.5rem;
   color:var(--navbar-icon-color);
   transition:var(--navbar-transition-speed);
+}
+
+.contact-box{
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 100%;
+
 }
