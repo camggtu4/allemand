@@ -10,11 +10,10 @@ $membres = $bdd->query('SELECT * FROM membres')
 <html>
 <head>
 
- 
+
 	<title>Quiz App</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="style.css">
-	<script src="https://kit.fontawesome.com/4b18bd0197.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/4b18bd0197.js" crossorigin="anonymous"></script>
  	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -58,9 +57,9 @@ $membres = $bdd->query('SELECT * FROM membres')
 		</ul>
 		<ul class="navbar-menu">
 			<li class="navbar-item">
-				<a href="#" class="navbar-link" onclick="">
+				<a href="#" class="navbar-link" onclick="svt()">
 					<i class="fas fa-landmark navbar-icon"></i>
-					<span class="navbar-title">Histoire-géo</span>
+					<span class="navbar-title">SVT</span>
 				</a>
 			</li>
 		</ul>
@@ -72,30 +71,18 @@ $membres = $bdd->query('SELECT * FROM membres')
 				</a>
 			</li>
 		</ul>
-
-
-
-			<!-- <div class="logo">
-				Logo
-			</div>
-			<div class="nav-buttons">	
-				<div class="allemand nav-btn">
-					<button class="btn2" onclick="allemand()">Allemand</button>
-				</div>
-				<div class="svt nav-btn">
-					<button class="btn2" onclick="svt1()">SVT</button>
-				</div>
-				<div class="hg nav-btn">
-					<button class="btn2">Histoire-Géo</button>
-				</div>
-				<div class="maths nav-btn">
-					<button class="btn2">Mathématiques</button>
-				</div>
-			</div>-->
 	</nav>
+
+
+
+
 	<!-- <div class="logOut">
 		<button class="btn3 logout navbar-title" onclick="deconnexion()">Déconnexion</button>
 	</div> -->
+
+
+
+
 	<div class="logOut">
 		<button class="btn3 logout navbar-title" onclick="aboutFonct()">En savoir plus</button>
 	</div>
@@ -118,6 +105,7 @@ $membres = $bdd->query('SELECT * FROM membres')
 			</p>
 			<p> Et oui je sais pour l'instant l'accueil est vide et moche, mais flemme de le faire mtn</p>
 		</div>
+		<!-- <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@camggtu/video/7075699973123296517" data-video-id="7075699973123296517" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@camggtu" href="https://www.tiktok.com/@camggtu">@camggtu</a> C&#39;est longgggggg... <a title="sot" target="_blank" href="https://www.tiktok.com/tag/sot">#SOT</a>  <a title="seaofthieves" target="_blank" href="https://www.tiktok.com/tag/seaofthieves">#seaofthieves</a> <a title="fyp" target="_blank" href="https://www.tiktok.com/tag/fyp">#fyp</a> <a target="_blank" title="♬ son original - user3487167836086" href="https://www.tiktok.com/music/son-original-7075699935521426182">♬ son original - user3487167836086</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script> -->
 	</div>
 					<!-- #### partie formulaire ####-->
 <div class="form custom-box hide">	
@@ -327,6 +315,27 @@ $membres = $bdd->query('SELECT * FROM membres')
 
 			<h4 class="title-chap1">Cours sur comment décrire un mouvement :</h4><br>
 			<button type="button" class=""><a href="img/spc/cours9-decrire-un-mouvement.pdf" download="SPC cours décrire un mouvement" class="btn">Télécharger</a></button> <br> <br><br>
+
+			<h4 class="title-chap1">Cours sur les actions et forces :</h4><br>
+			<button type="button" class=""><a href="img/spc/Cours10-actions-et-forces.pdf" download="SPC cours décrire un mouvement" class="btn">Télécharger</a></button> <br> <br><br>
+
+			<h4 class="title-chap1">Cours sur le principe d'inertie :</h4><br>
+			<button type="button" class=""><a href="img/spc/Cours11-principe-d-inertie.pdf" download="SPC cours décrire un mouvement" class="btn">Télécharger</a></button> <br> <br><br>
+
+		</div>
+	</div>
+
+					<!-- #### partie SVT ####-->
+
+
+	<div class="menu-svt custom-box hide">
+		<div class="title-selection">
+			<h2>Cours de SVT</h2> 
+		</div>
+
+		<div class="content-selection">
+			<h4 class="title-chap1">De la fécondation à la puberté :</h4><br>
+			<button type="button" class=""><a href="img/svt/Cours1-fecondation-puberte.pdf" download="SPC cours décrire un mouvement" class="btn">Télécharger</a></button> <br> <br><br>
 		</div>
 	</div>
 
@@ -346,14 +355,21 @@ $membres = $bdd->query('SELECT * FROM membres')
 				<div class="contact-box">
 					<table class="contact-box-table">
 						<tr>
-							<th>Discord</th>
-							<th>Twitter</th>
-							<th>Mail</th>
+							<th>Discord :</th>
+							<td><form action="https://discord.gg/amongusfr"><button class="contact-button button52" type="submit">Notre Discord ici</button></form></td>
 						</tr>
 						<tr>
-							<td><form action="https://discord.gg/amongusfr"><button class="contact-button button52" type="submit">Notre Discord ICI</button></form></td>
-							<td> <form action="https://twitter.com/LinusTech"><button class="contact-button" type="submit">Notre Twitter ICI<!-- <a><i class="fa-brands fa-twitter"></i></a> --></button></form></td>
+							<th>Twitter :</th>
+							<td> <form action="https://twitter.com/LinusTech"><button class="contact-button" type="submit">Notre Twitter ici<!-- <a><i class="fa-brands fa-twitter"></i></a> --></button></form></td>
+						</tr>
+						<tr>
+							<th>Tik Tok :</th>
+							<td> <form action="https://www.tiktok.com/@camggtu?lang=fr"><button class="contact-button" type="submit">Notre Tik Tok ici<!-- <a><i class="fa-brands fa-twitter"></i></a> --></button></form></td>
+						</tr>
+						<tr>
+							<th>Mail :</th>
 							<td><p>allemand.mail@gmail.com</p></td>
+
 						</tr>
 
 					</table>
@@ -366,10 +382,10 @@ $membres = $bdd->query('SELECT * FROM membres')
 
 
 </main>
-	<script src="question.js"></script>
-	<script src="app.js"></script>
-	<script src="spc.js"></script>
-	<script src="sketch.js"></script>
+	<script src="js/question.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/spc.js"></script>
+	<script src="js/sketch.js"></script>
 
 
 
