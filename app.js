@@ -8,13 +8,15 @@ const resultBox = document.querySelector(".result-box");
 const sketchBox = document.querySelector(".sketchBox");
 const menu = document.querySelector(".menu");
 const formulaireBox = document.querySelector(".form");
-const questionLimit = 10; // si je veux toutes les questions, remplacer 5 par quiz.lenght
+const questionLimit = 10; // si je veux toutes les questions, remplacer 10 par quiz.lenght
 const vocabBox = document.querySelector(".vocab-box");
 const spc = document.querySelector(".menu-spc");
 const accueil = document.querySelector(".accueil");
 const video = document.querySelector(".video-box");
 const form = document.querySelector(".form");
-const about = document.querySelector(".about-box")
+const about = document.querySelector(".about-box");
+
+
 let questionCounter =0;
 let currentQuestion;
 let availableQuestions = [];
@@ -68,7 +70,7 @@ function getNewQuestion(){
  	questionNumber.innerHTML = "Question " + (questionCounter + 1) + " sur " + questionLimit;
  	const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
  	currentQuestion = questionIndex;
- 	questionText.innerHTML = currentQuestion;
+ 	questionText.innerHTML = "Truc" + currentQuestion;
 
  	const index1 = availableQuestions.indexOf(questionIndex);
  	availableQuestions.splice(index1,1);
@@ -187,6 +189,7 @@ function tryAgainQuiz() {
 	spc.classList.add("hide");
 	quizBox.classList.remove("hide");
 	video.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 
 	resetQuiz();
 	startQuiz();
@@ -202,6 +205,7 @@ function aboutFonct() {
 	quizBox.classList.add("hide");
 	spc.classList.add("hide");
 	homeBox.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 	video.classList.add("hide");
 	about.classList.remove("hide");
 }
@@ -219,6 +223,7 @@ function goToHome() {
 	homeBox.classList.remove("hide");
 	video.classList.add("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 	resetQuiz();
 }
 function goToHome2() {
@@ -233,6 +238,7 @@ function goToHome2() {
 	quizBox.classList.add("hide");
 	spc.classList.add("hide");
 	video.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 	about.classList.add("hide");
 	resetQuiz();
 }
@@ -250,6 +256,7 @@ function goToHome3() {
 	spc.classList.add("hide");
 	video.classList.add("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 }
 
 function sketch() {
@@ -265,6 +272,7 @@ function sketch() {
 	spc.classList.add("hide");
 	video.classList.add("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 	resetQuiz();
 	//Text.innerHTML(sketch);
 
@@ -282,6 +290,7 @@ function vocab() {
 	spc.classList.add("hide");
 	video.classList.add("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 	resetQuiz();
 }
 function connexion() {
@@ -297,6 +306,7 @@ function connexion() {
 	spc.classList.add("hide");
 	video.classList.add("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 	resetQuiz();
 }
 function allemand() {
@@ -312,6 +322,7 @@ function allemand() {
 	spc.classList.add("hide");
 	video.classList.add("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 
 }
 // #### STARTINT POINT ####
@@ -332,6 +343,7 @@ function startQuiz() {
 	getNewQuestion();
 	answersIndicator();
 	video.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 }
 function spc1() {
 	sketchBox.classList.add("hide");
@@ -346,6 +358,22 @@ function spc1() {
 	spc.classList.remove("hide");
 	video.classList.add("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
+}
+function svt() {
+	sketchBox.classList.add("hide");
+	homeBox.classList.add("hide");
+	vocabBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	menu.classList.add("hide");
+	accueil.classList.add("hide");
+	formulaireBox.classList.add("hide");
+	resultBox.classList.add("hide");
+	quizBox.classList.add("hide");
+	spc.classList.add("hide");
+	video.classList.add("hide");
+	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.remove("hide");
 }
 
 function videos() {
@@ -361,6 +389,7 @@ function videos() {
 	spc.classList.add("hide");
 	video.classList.remove("hide");
 	about.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 }
 
 function deconnexion() {
@@ -376,6 +405,7 @@ function deconnexion() {
 	quizBox.classList.add("hide");
 	form.classList.remove("hide");
 	video.classList.add("hide");
+	document.querySelector(".menu-svt").classList.add("hide");
 	about.classList.add("hide");
 }
 
@@ -385,3 +415,4 @@ function deconnexion() {
 window.onload = function () {
 	homeBox.querySelector(".total-question").innerHTML = questionLimit;
 }
+
