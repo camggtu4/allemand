@@ -22,7 +22,7 @@ let availableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
 
-
+console.log("Wsh ça se met à jour ouuuuu ???");
 
 document.forms['inscription'].addEventListener("submit", function(e) {
  
