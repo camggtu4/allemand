@@ -212,11 +212,44 @@ const quiz = [
 		answer:0
 	},
 	{
-		q:'Comment dit-on les la réalité ?',
+		q:'Comment dit-on la réalité ?',
 		options:['die Wirklichkeit','die Traumwelt','Der Urlaub',"der Gold" ],
 		answer:0
 	},
-
-
+	{
+		q:'Comment dit-on le soulèvement ?',
+		options:['Der Aufstand','die Traumwelt','Der Urlaub',"der Gold" ],
+		answer:0
+	},
+	{
+		q:'Comment dit-on former ?',
+		options:['bilden','hinlegen','hinsetzen',"hüpfen" ],
+		answer:0
+	},
+	{
+		q:'Que veut dire Die Wiederverinigung ?',
+		options:['La réunification','la réalité','le soulèvement',"cauchemar" ],
+		answer:0
+	},
+	{
+		q:'Comment dit-on le camarade ?',
+		options:['Der Aufstand','das Messer ', 'die Traumwelt ',"ein Geisterpferd"  ],
+		answer:0
+	},
+	{
+		q:'Comment dit-on la majorité ?',
+		options:['die Mehrheit','der Genosse','Der Urlaub',"Der Aufstand" ],
+		answer:0
+	},
+	{
+		q:'Comment dit-on la fuite ?',
+		options:['die Flucht','die Traumwelt','Der Urlaub',"der Gold" ],
+		answer:0
+	},
+	{
+		q:'Comment dit-on mentir ?',
+		options:['lügen','der Vergleich','im Hintergrund',"beeinflüssen"  ],
+		answer:0
+	}
 
 ]
