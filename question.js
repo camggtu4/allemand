@@ -233,7 +233,7 @@ const quiz = [
 	},
 	{
 		q:'Comment dit-on le camarade ?',
-		options:['Der Aufstand','das Messer ', 'die Traumwelt ',"ein Geisterpferd"  ],
+		options:['Der Genosse','das Messer ', 'die Traumwelt ',"ein Geisterpferd"  ],
 		answer:0
 	},
 	{
